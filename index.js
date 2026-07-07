@@ -10,8 +10,8 @@ client.on('ready', async () => {
 });
 
 client.on('messageCreate', async (message) => {
-    // التأكد أن الرسالة من الشخص المطلوب
-    if (message.author.id === TARGET_USER_ID) {
+    // التأكد أن الرسالة من الشخص المطلوب وأن محتواها نقطة فقط
+    if (message.author.id === TARGET_USER_ID && message.content === '.') {
         
         // الرد مباشرة على الرسالة (Reply)
         try {
